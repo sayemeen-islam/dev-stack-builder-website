@@ -22,11 +22,19 @@
        #7C3AED 100%);
    --btn-gradient: linear-gradient(to right,
        #F97316 0%,
-       #EC4899 100%)
+       #EC4899 100%);
+   --text-gradient-2: linear-gradient(to right,
+       #EC4899 0%,
+       #8B5CF6 100%);
  }
 
  .text-gradient {
    background: var(--text-gradient);
+   background-clip: text;
+   color: transparent;
+ }
+ .text-gradient-2 {
+   background: var(--text-gradient-2);
    background-clip: text;
    color: transparent;
  }

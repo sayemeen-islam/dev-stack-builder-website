@@ -7,7 +7,7 @@ export function Banner() {
         <h1 className="text-[#0F172A] font-extrabold text-6xl font-inter leading-16">
           Build Your Ideal <span className="text-gradient">Development Stack</span>
         </h1>
-        <p className="text-20 leading-7 text-[#475569]">
+        <p className="text-[18px] leading-7 text-[#475569]">
           Explore frontend, backend, database, and tooling options, compare them
           side by side, and put together the stack that fits your next project.
         </p>
