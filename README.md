@@ -8,10 +8,10 @@ A modern web application designed for developers to explore different technologi
 
 - **React.js**
 - **Tailwind CSS & DaisyUI**
-- **TypeScript / JavaScript (ES6+)**
-- **React-Toastify (NPM Package)**
-- **JSON (for technology data)**
-- **Vite (build tool)**
+- **TypeScript**
+- **React-Toastify**
+- **JSON**
+- **Vite**
 
 ---
 

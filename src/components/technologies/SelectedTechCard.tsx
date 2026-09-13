@@ -1,5 +1,5 @@
 import { RxCross2 } from "react-icons/rx";
-import type { ITechnologyType } from "../types/type";
+import type { ITechnologyType } from "../../types/type";
 import type { Dispatch, SetStateAction } from "react";
 import { Bounce, toast } from "react-toastify";
 

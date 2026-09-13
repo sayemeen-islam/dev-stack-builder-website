@@ -1,5 +1,5 @@
 import { TiStar } from "react-icons/ti";
-import type { ITechnologyType } from "../types/type";
+import type { ITechnologyType } from "../../types/type";
 import { type Dispatch, type SetStateAction } from "react";
 import { Bounce, toast } from "react-toastify";
 
@@ -45,8 +45,6 @@ export default function TechnologyCard({
     }
   };
   const selected = selectedTechs.find((tech) => tech.id === technology.id);
-
-  console.log(selected);
 
   return (
     <div

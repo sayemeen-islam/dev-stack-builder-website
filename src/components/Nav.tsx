@@ -1,5 +1,5 @@
 import Logo from "../assets/logo-text.png";
-import Hamburger from '../assets/hamburger.png'
+import Hamburger from "../assets/hamburger.png";
 
 export default function Nav() {
   return (

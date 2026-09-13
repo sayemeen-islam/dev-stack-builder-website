@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
-import type { ITechnologyType } from "../types/type";
+import type { ITechnologyType } from "../../types/type";
 import SelectedTechCard from "./SelectedTechCard";
 import { Bounce, toast } from "react-toastify";
 
@@ -66,10 +66,10 @@ export default function SelectedTechnologies({
             setSelectedTechs={setSelectedTechs}
           ></SelectedTechCard>
         ))}
-        <div className="mt-6">
+        <div className="mt-6 text-center">
           <button
             onClick={handleRemoveAll}
-            className="btn  btn-block border border-[#ED8C85] text-[#D82C20]"
+            className="btn text-center  xl:btn-block border border-[#ED8C85] text-[#D82C20]"
           >
             Remove All
           </button>

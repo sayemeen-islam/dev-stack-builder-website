@@ -22,7 +22,11 @@ export function Banner() {
         </div>
       </div>
       <div>
-        <img className="max-full w-200 lg:w-full h-auto" src={BannerImg} alt="Banner-img" />
+        <img
+          className="max-full w-200 lg:w-full h-auto"
+          src={BannerImg}
+          alt="Banner-img"
+        />
       </div>
     </div>
   );
