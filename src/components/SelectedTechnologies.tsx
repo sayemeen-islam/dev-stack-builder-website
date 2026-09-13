@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { ITechnologyType } from "../types/type";
 import SelectedTechCard from "./SelectedTechCard";
+import { Bounce, toast } from "react-toastify";
 
 export interface SelectedTechnologiesProps {
   technologies: ITechnologyType[];
@@ -12,6 +13,21 @@ export default function SelectedTechnologies({
   selectedTechs,
   setSelectedTechs,
 }: SelectedTechnologiesProps) {
+  const handleRemoveAll = () => {
+    toast.warn("All technologies have been removed from your stack!", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+    setSelectedTechs([]);
+  };
+
   if (selectedTechs.length === 0) {
     return (
       <div className="card w-full bg-base-100 shadow-sm ">
@@ -52,7 +68,7 @@ export default function SelectedTechnologies({
         ))}
         <div className="mt-6">
           <button
-            onClick={() => setSelectedTechs([])}
+            onClick={handleRemoveAll}
             className="btn  btn-block border border-[#ED8C85] text-[#D82C20]"
           >
             Remove All

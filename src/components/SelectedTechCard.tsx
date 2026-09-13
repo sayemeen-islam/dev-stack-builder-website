@@ -1,6 +1,7 @@
 import { RxCross2 } from "react-icons/rx";
 import type { ITechnologyType } from "../types/type";
 import type { Dispatch, SetStateAction } from "react";
+import { Bounce, toast } from "react-toastify";
 
 export interface SelectedTechCardProps {
   technology: ITechnologyType;
@@ -17,7 +18,20 @@ export default function SelectedTechCard({
     const remainingSelectedTechs = selectedTechs.filter(
       (tech) => tech.id !== technology.id,
     );
-    setSelectedTechs(remainingSelectedTechs);
+    if (remainingSelectedTechs.length < selectedTechs.length) {
+      setSelectedTechs(remainingSelectedTechs);
+      toast.warn(`${technology.name} was removed from your stack!`, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
   };
 
   return (
@@ -39,7 +53,7 @@ export default function SelectedTechCard({
         </div>
         <RxCross2
           onClick={() => handleRemoveTechs(technology)}
-          className="w-6 h-6 cursor-pointer text-[#94A3B8] hover:text-[#e22c1f] hover:bg-[#ecb5b1] hover:btn-circle"
+          className="w-6 h-6 cursor-pointer text-[#94A3B8] hover:text-[#e22c1f] hover:bg-[#f5ebeb8f] hover:btn-circle"
         />
       </div>
     </div>

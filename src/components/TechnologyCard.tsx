@@ -1,6 +1,7 @@
 import { TiStar } from "react-icons/ti";
 import type { ITechnologyType } from "../types/type";
 import { type Dispatch, type SetStateAction } from "react";
+import { Bounce, toast } from "react-toastify";
 
 export interface TechnologyCardProps {
   technology: ITechnologyType;
@@ -16,12 +17,37 @@ export default function TechnologyCard({
 }: TechnologyCardProps) {
   const handleSelectedTechs = (technology: ITechnologyType): void => {
     const newSelectedTechs = [...selectedTechs, technology];
-
-    setSelectedTechs(newSelectedTechs);
+    if (selectedTechs.some((tech) => tech.id === technology.id)) {
+      toast.info(`${technology.name} is already in your stack!`, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    } else if (newSelectedTechs.length > selectedTechs.length) {
+      setSelectedTechs(newSelectedTechs);
+      toast.success(`${technology.name} was added to your stack!`, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
   };
   const selected = selectedTechs.find((tech) => tech.id === technology.id);
+
   console.log(selected);
-  
+
   return (
     <div
       className={`card w-[95%] border border-[#47556907]  bg-base-100  shadow-sm ${selected ? " border border-[#DB2777]" : ""}`}
@@ -57,7 +83,7 @@ export default function TechnologyCard({
         <div className="">
           <button
             onClick={() => handleSelectedTechs(technology)}
-            className={`btn btn-neutral rounded-md transition-transform duration-300 hover:scale-105   btn-block ${selected ? "btn-disabled bg-[#db27780e] text-[#DB2777]" : ""}`}
+            className={`btn btn-neutral rounded-md transition-transform duration-300 hover:scale-105   btn-block ${selected ? " border-none bg-[#db27780e] text-[#DB2777]" : ""}`}
           >
             {selected ? "✓ Added to Stack" : "Add to Stack"}
           </button>

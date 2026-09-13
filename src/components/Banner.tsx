@@ -5,7 +5,8 @@ export function Banner() {
     <div className="flex justify-between items-center w-full max-w-7xl mx-auto">
       <div className="max-w-xl h-auto space-y-7">
         <h1 className="text-[#0F172A] font-extrabold text-6xl font-inter leading-16">
-          Build Your Ideal <span className="text-gradient">Development Stack</span>
+          Build Your Ideal{" "}
+          <span className="text-gradient">Development Stack</span>
         </h1>
         <p className="text-[18px] leading-7 text-[#475569]">
           Explore frontend, backend, database, and tooling options, compare them

@@ -15,7 +15,6 @@ export default function Technologies({ techPromise }: TechnologiesProps) {
 
   return (
     <div className="w-full max-w-7xl mx-auto mt-2">
-
       <div className="grid grid-cols-12 gap-6 ">
         {/* technology-cards */}
         <div className="grid grid-cols-3 gap-x-3 gap-y-6 col-span-9 ">

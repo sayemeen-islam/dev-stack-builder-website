@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Technologies from "./components/Technologies";
 import type { ITechnologyType } from "./types/type";
 import { Footer } from "./components/Footer";
+import { ToastContainer } from "react-toastify";
 
 const techFetch = async (): Promise<ITechnologyType[]> => {
   const res = await fetch("/data.json");
@@ -17,7 +18,7 @@ function App() {
     <>
       <Nav></Nav>
       <Banner></Banner>
-      <div className="w-full max-w-7xl mx-auto mt-2">
+      <div className="w-full max-w-7xl mx-auto mt-10">
         {" "}
         <h2 className="text-[34px] font-extrabold font-inter text-[#0F172A] mb-1">
           Explore the{" "}
@@ -27,12 +28,11 @@ function App() {
           Pick one technology per category to build your ideal stack.
         </p>
       </div>
-      <Suspense
-        fallback={<p className=" p-10">Loading technologies...</p>}
-      >
+      <Suspense fallback={<p className=" p-10">Loading technologies...</p>}>
         <Technologies techPromise={techPromise}></Technologies>
       </Suspense>
       <Footer></Footer>
+      <ToastContainer />
     </>
   );
 }
