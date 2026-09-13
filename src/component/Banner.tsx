@@ -12,7 +12,7 @@ export function Banner() {
           side by side, and put together the stack that fits your next project.
         </p>
         <div className="flex gap-3 mt-14">
-          <button className="btn rounded-lg btn-gradient font-inter hover:shadow-md hover:border-purple-500">
+          <button className="btn rounded-lg btn-gradient text-white font-inter hover:shadow-md hover:border-purple-500">
             Explore Technologies
           </button>
           <button className="btn btn-outline border-[#E5E7EB] text-[#374151] rounded-lg  px-13 font-inter">

@@ -16,7 +16,7 @@
  }
 
  :root {
-   --text-gradient: linear-gradient(to right,
+   --brand-gradient: linear-gradient(to right,
        #FF5722 0%,
        #D81B7E 50%,
        #7C3AED 100%);
@@ -29,7 +29,7 @@
  }
 
  .text-gradient {
-   background: var(--text-gradient);
+   background: var(--brand-gradient);
    background-clip: text;
    color: transparent;
  }
@@ -40,5 +40,5 @@
  }
 
  .btn-gradient {
-   background: var(--btn-gradient);
+   background: var(--brand-gradient);
  }

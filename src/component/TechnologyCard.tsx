@@ -1,21 +1,37 @@
 import { TiStar } from "react-icons/ti";
 import type { ITechnologyType } from "../types/type";
+import { type Dispatch, type SetStateAction } from "react";
 
 export interface TechnologyCardProps {
   technology: ITechnologyType;
+
+  selectedTechs: ITechnologyType[];
+  setSelectedTechs: Dispatch<SetStateAction<ITechnologyType[]>>;
 }
 
-export default function TechnologyCard({ technology }: TechnologyCardProps) {
+export default function TechnologyCard({
+  technology,
+  selectedTechs,
+  setSelectedTechs,
+}: TechnologyCardProps) {
+  const handleSelectedTechs = (technology: ITechnologyType): void => {
+    const newSelectedTechs = [...selectedTechs, technology];
+
+    setSelectedTechs(newSelectedTechs);
+  };
+  const selected = selectedTechs.find((tech) => tech.id === technology.id);
   return (
-    <div className="card w-[95%] border border-[#47556907]  bg-base-100  shadow-sm">
+    <div
+      className={`card w-[95%] border border-[#47556907]  bg-base-100  shadow-sm ${selected ? " border border-[#DB2777]" : ""}`}
+    >
       <div className="card-body">
         <div className="flex justify-between mb-4">
           <img
-            className="w-6 h-6 translate-y-1"
+            className="w-10 h-10 translate-y-1"
             src={technology.icon}
             alt="technology-icon"
           />
-          <button className="btn btn-xs bg-[#F1F5F9] btn-disabled rounded-full text-[#0F172A]  ">
+          <button className="badge  badge-soft bg-[#db27780e] text-[#DB2777] rounded-full ">
             {technology.badge}
           </button>
         </div>
@@ -37,7 +53,12 @@ export default function TechnologyCard({ technology }: TechnologyCardProps) {
         </div>
 
         <div className="">
-          <button className="btn btn-neutral btn-block">Add to Stack</button>
+          <button
+            onClick={() => handleSelectedTechs(technology)}
+            className={`btn btn-neutral rounded-md transition-transform duration-300 hover:scale-105   btn-block ${selected ? "btn-disabled bg-[#db27780e] text-[#DB2777]" : ""}`}
+          >
+            {selected ? "✓ Added to Stack" : "Add to Stack"}
+          </button>
         </div>
       </div>
     </div>
