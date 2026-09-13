@@ -30,7 +30,7 @@ export default function SelectedTechnologies({
 
   if (selectedTechs.length === 0) {
     return (
-      <div className="card w-full bg-base-100 shadow-sm ">
+      <div className="card w-full bg-base-100 shadow-sm">
         <div className="card-body">
           <h3 className="text-[18px] text-[#0F172A] font-bold -mb-1">
             Your Stack

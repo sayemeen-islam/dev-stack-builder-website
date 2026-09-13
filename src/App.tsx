@@ -18,13 +18,13 @@ function App() {
     <>
       <Nav></Nav>
       <Banner></Banner>
-      <div className="w-full max-w-7xl mx-auto mt-10">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 -mt-5 md:mt-10">
         {" "}
-        <h2 className="text-[34px] font-extrabold font-inter text-[#0F172A] mb-1">
+        <h2 className="text-[30px] md:text-[34px] font-extrabold font-inter text-[#0F172A] md:mb-1">
           Explore the{" "}
           <span className="text-gradient-2 text-white">Technologies</span>
         </h2>
-        <p className="text-[#64748B] mb-10">
+        <p className="text-[15px] md:text-[16px] text-[#64748B] mb-5 md:mb-10">
           Pick one technology per category to build your ideal stack.
         </p>
       </div>

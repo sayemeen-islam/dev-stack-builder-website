@@ -3,31 +3,31 @@ import Logo from "../assets/logo-text.png";
 export function Footer() {
   return (
     <footer className="mt-25 border-t border-t-[#F1F5F9] ">
-      <div className="w-full max-w-7xl mx-auto">
-        <div className="  py-15 flex ">
-          <div className="flex-2 space-y-4">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="  py-15 lg:flex">
+          <div className="flex flex-col items-center lg:items-start lg:flex-2 space-y-4">
             <img
               className="cursor-pointer w-31 h-8 flex-4"
               src={Logo}
               alt="Logo"
             />
-            <p className="text-[13px] text-[#64748B] w-110">
+            <p className="text-center lg:text-start text-[13px] text-[#64748B] lg:max-w-110">
               Curated tools, technologies, and resources for developers building
               modern software.
             </p>
             <div className="text-[#475569] text-[13px] font-semibold flex gap-4 mt-2">
               <a href="#" className="">
                 GitHub
-              </a>
+              </a><span className="lg:hidden" > • </span>
               <a href="#" className="">
                 Twitter
-              </a>
+              </a><span className="lg:hidden" > • </span>
               <a href="#" className="">
                 LinkedIn
               </a>
             </div>
           </div>
-          <div className=" text-[13px] flex flex-col flex-1 space-y-4">
+          <div className="hidden text-[13px] lg:flex flex-col flex-1 space-y-4">
             <h6 className=" font-bold  text-[#0F172A]">PRODUCT</h6>
             <a href="#" className="text-[#64748B]">
               Home
@@ -40,7 +40,7 @@ export function Footer() {
             </a>
           </div>
 
-          <div className=" text-[13px] flex flex-col flex-1 space-y-4">
+          <div className="hidden text-[13px] lg:flex flex-col flex-1 space-y-4">
             <h6 className=" font-bold  text-[#0F172A]">COMPANY</h6>
             <a href="#" className="text-[#64748B]">
               About
@@ -53,7 +53,7 @@ export function Footer() {
             </a>
           </div>
 
-          <div className=" text-[13px] flex flex-col flex-1 space-y-4">
+          <div className="hidden text-[13px] lg:flex flex-col flex-1 space-y-4">
             <h6 className=" font-bold  text-[#0F172A]">LEGAL</h6>
             <a href="#" className="text-[#64748B]">
               Privacy Policy
