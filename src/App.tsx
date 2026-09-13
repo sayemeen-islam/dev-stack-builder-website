@@ -2,9 +2,9 @@ import { Suspense } from "react";
 import { Banner } from "./components/Banner";
 import Nav from "./components/Nav";
 import Technologies from "./components/technologies/Technologies";
-import type { ITechnologyType } from "./types/";
 import { Footer } from "./components/Footer";
 import { ToastContainer } from "react-toastify";
+import type { ITechnologyType } from "./types/technologies";
 
 const techFetch = async (): Promise<ITechnologyType[]> => {
   const res = await fetch("/data.json");
