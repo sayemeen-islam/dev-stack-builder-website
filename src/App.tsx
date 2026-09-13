@@ -1,8 +1,9 @@
 import { Suspense } from "react";
-import { Banner } from "./component/Banner";
-import Nav from "./component/Nav";
-import Technologies from "./component/Technologies";
+import { Banner } from "./components/Banner";
+import Nav from "./components/Nav";
+import Technologies from "./components/Technologies";
 import type { ITechnologyType } from "./types/type";
+import { Footer } from "./components/Footer";
 
 const techFetch = async (): Promise<ITechnologyType[]> => {
   const res = await fetch("/data.json");
@@ -31,6 +32,7 @@ function App() {
       >
         <Technologies techPromise={techPromise}></Technologies>
       </Suspense>
+      <Footer></Footer>
     </>
   );
 }

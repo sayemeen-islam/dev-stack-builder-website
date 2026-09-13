@@ -8,11 +8,11 @@ export default function Nav() {
       <img className='cursor-pointer' src={Logo} alt="Logo" />
 
       <ul className='flex gap-7'>
-        <li className='text-[#DB2777] font-semibold'><a href="#home" >Home</a></li>
-        <li className='text-[#475569] font-semibold'><a href="#technologies" >Technologies</a></li>
-        <li className='text-[#475569] font-semibold'><a href="#projects" >Projects</a></li>
-        <li className='text-[#475569] font-semibold'><a href="#about" >About</a></li>
-        <li className='text-[#475569] font-semibold'><a href="#contact">Contact</a></li>
+        <li className='text-[#DB2777] font-semibold'><a href="#" >Home</a></li>
+        <li className='text-[#475569] font-semibold'><a href="#" >Technologies</a></li>
+        <li className='text-[#475569] font-semibold'><a href="#" >Projects</a></li>
+        <li className='text-[#475569] font-semibold'><a href="#" >About</a></li>
+        <li className='text-[#475569] font-semibold'><a href="#">Contact</a></li>
       </ul>
 
       <div className='flex gap-1 items-center'>

@@ -20,6 +20,8 @@ export default function TechnologyCard({
     setSelectedTechs(newSelectedTechs);
   };
   const selected = selectedTechs.find((tech) => tech.id === technology.id);
+  console.log(selected);
+  
   return (
     <div
       className={`card w-[95%] border border-[#47556907]  bg-base-100  shadow-sm ${selected ? " border border-[#DB2777]" : ""}`}
