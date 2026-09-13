@@ -1,6 +1,6 @@
 # 🧱 Dev Stack Builder
 
-A modern web application designed for developers to explore different technologies and build their own personalized development stack.
+A modern web application designed for developers to explore different technologies and build their own personalized development stack, with a responsive design for different screen sizes.
 
 ---
 

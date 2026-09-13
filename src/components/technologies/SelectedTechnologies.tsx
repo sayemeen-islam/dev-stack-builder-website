@@ -1,7 +1,8 @@
 import type { Dispatch, SetStateAction } from "react";
-import type { ITechnologyType } from "../../types/type";
+
 import SelectedTechCard from "./SelectedTechCard";
 import { Bounce, toast } from "react-toastify";
+import type { ITechnologyType } from "../../types/technologies";
 
 export interface SelectedTechnologiesProps {
   technologies: ITechnologyType[];

@@ -1,7 +1,7 @@
 import { RxCross2 } from "react-icons/rx";
-import type { ITechnologyType } from "../../types/type";
 import type { Dispatch, SetStateAction } from "react";
 import { Bounce, toast } from "react-toastify";
+import type { ITechnologyType } from "../../types/technologies";
 
 export interface SelectedTechCardProps {
   technology: ITechnologyType;

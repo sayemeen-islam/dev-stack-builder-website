@@ -1,7 +1,7 @@
 import { TiStar } from "react-icons/ti";
-import type { ITechnologyType } from "../../types/type";
 import { type Dispatch, type SetStateAction } from "react";
 import { Bounce, toast } from "react-toastify";
+import type { ITechnologyType } from "../../types/technologies";
 
 export interface TechnologyCardProps {
   technology: ITechnologyType;
